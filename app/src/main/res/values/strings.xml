@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Learn to Count</string>
+    <string name="intro">Aplikasi android sederhana untuk melatih anak SD belajar menghitung.</string>
+    <string name="satu">Pertanyaan 1</string>
+    <string name="dua">Pertanyaan 2</string>
+    <string name="tiga">Pertanyaan 3</string>
+    <string name="empat">Pertanyaan 4</string>
+    <string name="lima">Pertanyaan 5</string>
+    <string name="jawab">Jawab</string>
+    <string name="soal2_pil1">a. 3 x 7</string>
+    <string name="soal2_pil2">b. 3 x 6</string>
+    <string name="soal2_pil3">c. 4 x 6</string>
+    <string name="soal4_pil1">a. 4 x 4</string>
+    <string name="soal4_pil2">b. 5 x 4</string>
+    <string name="soal4_pil3">c. 4 x 5</string>
 </resources>
