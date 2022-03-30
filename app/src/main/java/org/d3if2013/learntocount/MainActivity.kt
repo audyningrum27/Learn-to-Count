@@ -51,13 +51,6 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.jwb5_invalid, Toast.LENGTH_LONG).show()
             return
         }
-/*
-        if(!soal1.matches(".*[0-9].*".toRegex())
-            || !soal3.matches(".*[0-9].*".toRegex())
-            || !soal5.matches(".*[0-9].*".toRegex())) {
-            Toast.makeText(this, R.string.hanya_angka, Toast.LENGTH_LONG).show()
-            return
-        }*/
 
         var marks = 0
         var tanda = ""
