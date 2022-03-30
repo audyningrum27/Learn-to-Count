@@ -10,7 +10,22 @@
     <string name="soal2_pil1">a. 3 x 7</string>
     <string name="soal2_pil2">b. 3 x 6</string>
     <string name="soal2_pil3">c. 4 x 6</string>
-    <string name="soal4_pil1">a. 4 x 4</string>
+    <string name="soal4_pil1">a. 4 x 5</string>
     <string name="soal4_pil2">b. 5 x 4</string>
-    <string name="soal4_pil3">c. 4 x 5</string>
+    <string name="soal4_pil3">c. 4 x 4</string>
+    <string name="submit">SUBMIT</string>
+    <string name="reset">RESET</string>
+    <string name="marks">BENAR: %4$s</string>
+    <string name="grade">NILAI: %1$d</string>
+    <string name="one">1. %1$d %1$s</string>
+    <string name="two">2. %1$d %1$s</string>
+    <string name="three">3. %1$d %1$s</string>
+    <string name="four">4. %1$d %1$s</string>
+    <string name="five">5. %1$d %1$s</string>
+    <string name="jwb1_invalid">Jawaban No.1 tidak boleh kosong</string>
+    <string name="jwb2_invalid">Jawaban No.2 tidak boleh kosong</string>
+    <string name="jwb3_invalid">Jawaban No.3 tidak boleh kosong</string>
+    <string name="jwb4_invalid">Jawaban No.4 tidak boleh kosong</string>
+    <string name="jwb5_invalid">Jawaban No.5 tidak boleh kosong</string>
+    <string name="hanya_angka">Masukkan hanya bisa angka</string>
 </resources>

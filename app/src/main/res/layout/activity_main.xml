@@ -305,6 +305,108 @@
             android:layout_marginTop="16dp"
             android:background="?android:attr/listDivider"
             app:layout_constraintTop_toBottomOf="@+id/soal5_hint"/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/reset"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider5"
+            app:layout_constraintVertical_bias="0.071" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/reset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/submit"
+            app:layout_constraintTop_toTopOf="@+id/submit" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@+id/reset"/>
+
+        <TextView
+            android:id="@+id/marksTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintTop_toBottomOf="@id/divider6"
+            tools:text="BENAR: 4 dari 5 soal">
+        </TextView>
+
+        <TextView
+            android:id="@+id/gradeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintTop_toBottomOf="@id/marksTextView"
+            tools:text="NILAI: 75">
+        </TextView>
+
+        <TextView
+            android:id="@+id/no1TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintTop_toBottomOf="@id/gradeTextView"
+            tools:text="1. 45 Benar">
+        </TextView>
+
+        <TextView
+            android:id="@+id/no2TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintTop_toBottomOf="@id/no1TextView"
+            tools:text="2. 30 Benar">
+        </TextView>
+
+        <TextView
+            android:id="@+id/no3TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintTop_toBottomOf="@id/no2TextView"
+            tools:text="3. 50 Benar">
+        </TextView>
+
+        <TextView
+            android:id="@+id/no4TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintTop_toBottomOf="@id/no3TextView"
+            tools:text="4. 65 Benar">
+        </TextView>
+
+        <TextView
+            android:id="@+id/no5TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintTop_toBottomOf="@id/no4TextView"
+            tools:text="5. 100 Salah">
+        </TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
