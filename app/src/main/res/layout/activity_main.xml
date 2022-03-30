@@ -402,11 +402,18 @@
             android:id="@+id/no5TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
             android:fontFamily="@font/poppins"
             app:layout_constraintTop_toBottomOf="@id/no4TextView"
             tools:text="5. 100 Salah">
         </TextView>
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="64dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@+id/no5TextView"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
