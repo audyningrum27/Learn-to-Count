@@ -51,13 +51,13 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.jwb5_invalid, Toast.LENGTH_LONG).show()
             return
         }
-
+/*
         if(!soal1.matches(".*[0-9].*".toRegex())
             || !soal3.matches(".*[0-9].*".toRegex())
             || !soal5.matches(".*[0-9].*".toRegex())) {
             Toast.makeText(this, R.string.hanya_angka, Toast.LENGTH_LONG).show()
             return
-        }
+        }*/
 
         var marks = 0
         var tanda = ""
@@ -109,32 +109,32 @@ class MainActivity : AppCompatActivity() {
         }
 
         if(marks == 5){
-            tanda = "Benar 5 dari 5 soal"
+            tanda = "5 dari 5 soal"
             nilai = 100
             binding.marksTextView.text = getString(R.string.marks, tanda)
             binding.gradeTextView.text = getString(R.string.grade, nilai)
         } else if(marks == 4) {
-            tanda = "Benar 4 dari 5 soal"
+            tanda = "4 dari 5 soal"
             nilai = 80
             binding.marksTextView.text = getString(R.string.marks, tanda)
             binding.gradeTextView.text = getString(R.string.grade, nilai)
         } else if(marks == 3) {
-            tanda = "Benar 3 dari 5 soal"
+            tanda = "3 dari 5 soal"
             nilai = 60
             binding.marksTextView.text = getString(R.string.marks, tanda)
             binding.gradeTextView.text = getString(R.string.grade, nilai)
         } else if(marks == 2) {
-            tanda = "Benar 2 dari 5 soal"
+            tanda = "2 dari 5 soal"
             nilai = 40
             binding.marksTextView.text = getString(R.string.marks, tanda)
             binding.gradeTextView.text = getString(R.string.grade, nilai)
         } else if(marks == 1) {
-            tanda = "Benar 1 dari 5 soal"
+            tanda = "1 dari 5 soal"
             nilai = 20
             binding.marksTextView.text = getString(R.string.marks, tanda)
             binding.gradeTextView.text = getString(R.string.grade, nilai)
         } else {
-            tanda = "Benar 0 dari 5 soal"
+            tanda = "0 dari 5 soal"
             nilai = 0
             binding.marksTextView.text = getString(R.string.marks, tanda)
             binding.gradeTextView.text = getString(R.string.grade, nilai)

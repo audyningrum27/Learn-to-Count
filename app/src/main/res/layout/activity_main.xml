@@ -63,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
+                android:inputType="number"
                 android:hint="@string/jawab" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -179,6 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
+                android:inputType="number"
                 android:hint="@string/jawab" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -295,6 +297,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
+                android:inputType="number"
                 android:hint="@string/jawab" />
         </com.google.android.material.textfield.TextInputLayout>
 
