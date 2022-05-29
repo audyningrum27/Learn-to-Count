@@ -3,9 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/drawable/circle_background.xml" value="0.1" />
+        <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/drawable/ic_baseline_delete_forever_24.xml" value="0.254" />
+        <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/drawable/ic_baseline_history_24.xml" value="0.254" />
         <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/font/poppins.xml" value="0.28020833333333334" />
         <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/layout/fragment_about.xml" value="0.264" />
+        <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/layout/fragment_answer_key.xml" value="0.2484375" />
+        <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/layout/fragment_histori.xml" value="0.2484375" />
+        <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/layout/fragment_hitung.xml" value="0.2484375" />
+        <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/layout/item_histori.xml" value="0.264" />
         <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/layout/list_soal.xml" value="0.4" />
+        <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/menu/histori_menu.xml" value="0.2484375" />
+        <entry key="..\:/@ kuliah/Semester 4/Pemrograman Untuk Perangkat Bergerak 1/Assessment 01/LearnToCount/app/src/main/res/menu/option_menu.xml" value="0.2484375" />
       </map>
     </option>
   </component>

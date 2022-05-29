@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/hitungFragment">
+
+    <fragment
+        android:id="@+id/hitungFragment"
+        android:name="org.d3if2013.learntocount.ui.hitung.HitungFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_hitung" >
+        <action
+            android:id="@+id/action_hitungFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_hitungFragment_to_answerKeyFragment"
+            app:destination="@id/answerKeyFragment" />
+        <action
+            android:id="@+id/action_hitungFragment_to_historiFragment"
+            app:destination="@id/historiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="org.d3if2013.learntocount.ui.AboutFragment"
+        android:label="@string/about_apk" />
+    <fragment
+        android:id="@+id/answerKeyFragment"
+        android:name="org.d3if2013.learntocount.ui.AnswerKeyFragment"
+        android:label="@string/answer_key" />
+    <fragment
+        android:id="@+id/historiFragment"
+        android:name="org.d3if2013.learntocount.ui.histori.HistoriFragment"
+        android:label="@string/histori" />
+</navigation>

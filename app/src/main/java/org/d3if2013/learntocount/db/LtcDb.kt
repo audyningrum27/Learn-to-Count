@@ -1,0 +1,32 @@
+package org.d3if2013.learntocount.db
+
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+
+@Database(entities = [LtcEntity::class], version = 1, exportSchema = false)
+abstract class LtcDb : RoomDatabase() {
+    abstract val dao: LtcDao
+
+    companion object {
+        @Volatile
+        private var INSTANCE: LtcDb? = null
+        fun getInstance(context: Context): LtcDb {
+            synchronized(this) {
+                var instance = INSTANCE
+                if (instance == null) {
+                    instance = Room.databaseBuilder(
+                        context.applicationContext,
+                        LtcDb::class.java,
+                        "ltc.db"
+                    )
+                        .fallbackToDestructiveMigration()
+                        .build()
+                    INSTANCE = instance
+                }
+                return instance
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Learn to Count</string>
     <string name="intro">Aplikasi android sederhana untuk melatih anak SD belajar menghitung.</string>
+    <string name="copyright">Learn to Learn merupakan aplikasi Android untuk melatih anak SD belajar menghitung.\n\nAplikasi ini dibuat untuk Assessment Mobpro1. Temukan kodenya di https://github.com/audyningrum27/Learn-to-Count\n\nCopyright © 2022 Nurul Qofifah Audyningrum.\nAll rights reserved.</string>
     <string name="satu">Pertanyaan 1</string>
     <string name="dua">Pertanyaan 2</string>
     <string name="tiga">Pertanyaan 3</string>
@@ -28,4 +29,21 @@
     <string name="jwb4_invalid">Jawaban No.4 tidak boleh kosong</string>
     <string name="jwb5_invalid">Jawaban No.5 tidak boleh kosong</string>
     <string name="hanya_angka">Masukkan hanya bisa angka</string>
+    <string name="about_apk">Tentang Aplikasi</string>
+    <string name="key_1">Hasil dari 2 x 4 x 6 = <b>48</b></string>
+    <string name="key_2">Perkalian bilangan yang hasilnya 24 adalah <b>4 x 6</b></string>
+    <string name="key_3">13 x 3 = <b>39</b></string>
+    <string name="key_4">Bentuk perkalian dari 4 + 4 + 4 + 4 + 4 adalah <b>4 x 5</b></string>
+    <string name="key_5">1m sama dengan <b>100cm</b></string>
+    <string name="answer_key">Kunci Jawaban</string>
+    <string name="share">Bagikan</string>
+    <string name="share_template">Saya mendapat skor: \n%1$s \n%2$s \nBuruan gunakan aplikasi Learn to Count</string>
+    <string name="belum_ada_data">Belum ada data</string>
+    <string name="histori">Histori</string>
+    <string name="mark_x">BENAR: %1$s</string>
+    <string name="grade_x">NILAI: %1$d</string>
+    <string name="hapus_histori">Hapus Histori</string>
+    <string name="konfirmasi_hapus">Hapus semua histori?</string>
+    <string name="hapus">Hapus</string>
+    <string name="batal">Batal</string>
 </resources>
