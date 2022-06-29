@@ -1,5 +1,6 @@
 package org.d3if2013.learntocount.ui.hitung
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,6 +12,8 @@ import org.d3if2013.learntocount.db.LtcDao
 import org.d3if2013.learntocount.db.LtcEntity
 import org.d3if2013.learntocount.model.HasilLtc
 import org.d3if2013.learntocount.model.hitungLtc
+import org.d3if2013.learntocount.network.ApiStatus
+import org.d3if2013.learntocount.network.LtcApi
 
 class HitungViewModel(private val db: LtcDao) : ViewModel() {
     private val hasilLtc = MutableLiveData<HasilLtc?>()

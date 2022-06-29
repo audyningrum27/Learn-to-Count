@@ -12,4 +12,10 @@
         android:icon="@drawable/ic_baseline_history_24"
         android:title="@string/histori"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_article"
+        android:icon="@drawable/ic_baseline_article_24"
+        android:title="@string/article"
+        app:showAsAction="ifRoom" />
 </menu>

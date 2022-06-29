@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_hitungFragment_to_historiFragment"
             app:destination="@id/historiFragment" />
+        <action
+            android:id="@+id/action_hitungFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -32,4 +35,8 @@
         android:id="@+id/historiFragment"
         android:name="org.d3if2013.learntocount.ui.histori.HistoriFragment"
         android:label="@string/histori" />
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="org.d3if2013.learntocount.ui.article.ArticleFragment"
+        android:label="@string/article" />
 </navigation>

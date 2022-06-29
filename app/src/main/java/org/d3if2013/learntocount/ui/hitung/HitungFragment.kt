@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import org.d3if2013.learntocount.R
 import org.d3if2013.learntocount.databinding.FragmentHitungBinding
 import org.d3if2013.learntocount.db.LtcDb
+import org.d3if2013.learntocount.network.ApiStatus
 
 class HitungFragment : Fragment() {
 
@@ -23,21 +24,23 @@ class HitungFragment : Fragment() {
         ViewModelProvider(this, factory)[HitungViewModel::class.java]
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         binding = FragmentHitungBinding.inflate(layoutInflater, container, false)
         setHasOptionsMenu(true)
         return (binding.root)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         binding.answerKey.setVisibility(View.GONE)
         binding.shareBtn.setVisibility(View.GONE)
 
         binding.submit.setOnClickListener {
             submitClick()
-            binding.answerKey.setVisibility(View.VISIBLE)
-            binding.shareBtn.setVisibility(View.VISIBLE)
         }
 
         binding.reset.setOnClickListener {
@@ -46,14 +49,29 @@ class HitungFragment : Fragment() {
             binding.shareBtn.setVisibility(View.GONE)
         }
 
-        binding.answerKey.setOnClickListener{
+        binding.answerKey.setOnClickListener {
             it.findNavController().navigate(
                 R.id.action_hitungFragment_to_answerKeyFragment
             )
         }
 
-        binding.shareBtn.setOnClickListener{
+        binding.shareBtn.setOnClickListener {
             shareData()
+        }
+    }
+
+    private fun updateProgress(status: ApiStatus) {
+        when (status) {
+            ApiStatus.LOADING -> {
+                binding.progressBar.visibility = View.VISIBLE
+            }
+            ApiStatus.SUCCESS -> {
+                binding.progressBar.visibility = View.GONE
+            }
+            ApiStatus.FAILED -> {
+                binding.progressBar.visibility = View.GONE
+                binding.networkError.visibility = View.VISIBLE
+            }
         }
     }
 
@@ -68,26 +86,41 @@ class HitungFragment : Fragment() {
         if (TextUtils.isEmpty(soal1)) {
             Toast.makeText(context, R.string.jwb1_invalid, Toast.LENGTH_LONG).show()
             return
+        } else {
+            binding.answerKey.setVisibility(View.VISIBLE)
+            binding.shareBtn.setVisibility(View.VISIBLE)
         }
 
         if (soal2 == -1) {
             Toast.makeText(context, R.string.jwb2_invalid, Toast.LENGTH_LONG).show()
             return
+        } else {
+            binding.answerKey.setVisibility(View.VISIBLE)
+            binding.shareBtn.setVisibility(View.VISIBLE)
         }
 
         if (TextUtils.isEmpty(soal3)) {
             Toast.makeText(context, R.string.jwb3_invalid, Toast.LENGTH_LONG).show()
             return
+        } else {
+            binding.answerKey.setVisibility(View.VISIBLE)
+            binding.shareBtn.setVisibility(View.VISIBLE)
         }
 
         if (soal4 == -1) {
             Toast.makeText(context, R.string.jwb4_invalid, Toast.LENGTH_LONG).show()
             return
+        } else {
+            binding.answerKey.setVisibility(View.VISIBLE)
+            binding.shareBtn.setVisibility(View.VISIBLE)
         }
 
         if (TextUtils.isEmpty(soal5)) {
             Toast.makeText(context, R.string.jwb5_invalid, Toast.LENGTH_LONG).show()
             return
+        } else {
+            binding.answerKey.setVisibility(View.VISIBLE)
+            binding.shareBtn.setVisibility(View.VISIBLE)
         }
 
         //Jawaban benar atau salah
@@ -112,7 +145,7 @@ class HitungFragment : Fragment() {
             binding.no1TextView.text = getString(R.string.one, soal1, salah)
         }
 
-        if(rightAnswer2) {
+        if (rightAnswer2) {
             marks++
             binding.no2TextView.text = getString(R.string.two, ra2, benar)
         } else {
@@ -126,10 +159,10 @@ class HitungFragment : Fragment() {
             binding.no3TextView.text = getString(R.string.three, soal3, salah)
         }
 
-        if(rightAnswer4) {
+        if (rightAnswer4) {
             marks++
             binding.no4TextView.text = getString(R.string.four, ra4, benar)
-        } else{
+        } else {
             binding.no4TextView.text = getString(R.string.four, ra4, salah)
         }
 
@@ -180,7 +213,7 @@ class HitungFragment : Fragment() {
         }
     }
 
-    private fun getSoal2(rightAnswer2:Boolean): String {
+    private fun getSoal2(rightAnswer2: Boolean): String {
         val soal2 = binding.soal2RadioGroup.checkedRadioButtonId
         val stringRes = when {
             rightAnswer2 -> {
@@ -196,7 +229,7 @@ class HitungFragment : Fragment() {
         return getString(stringRes)
     }
 
-    private fun getSoal4(rightAnswer4:Boolean): String {
+    private fun getSoal4(rightAnswer4: Boolean): String {
         val soal4 = binding.soal4RadioGroup.checkedRadioButtonId
         val stringRes = when {
             rightAnswer4 -> {
@@ -233,10 +266,17 @@ class HitungFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
+        when (item.itemId) {
             R.id.menu_histori -> {
                 findNavController().navigate(
                     R.id.action_hitungFragment_to_historiFragment
+                )
+                return true
+            }
+
+            R.id.menu_article -> {
+                findNavController().navigate(
+                    R.id.action_hitungFragment_to_articleFragment
                 )
                 return true
             }
@@ -252,14 +292,17 @@ class HitungFragment : Fragment() {
     }
 
     private fun shareData() {
-        val message = getString(R.string.share_template,
+        val message = getString(
+            R.string.share_template,
             binding.marksTextView.text,
             binding.gradeTextView.text
         )
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
         if (shareIntent.resolveActivity(
-                requireActivity().packageManager) != null) {
+                requireActivity().packageManager
+            ) != null
+        ) {
             startActivity(shareIntent)
         }
     }
